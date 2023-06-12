@@ -16,5 +16,9 @@
     "npm": "^9.7.1"
   },
   "keywords": [],
-  "description": ""
+  "description": "",
+    "engines": {
+    "node": "18.16.0"
+  }
 }
+
