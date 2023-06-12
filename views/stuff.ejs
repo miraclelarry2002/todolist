@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todolist</title>
+    <link rel="stylesheet" href="css/stuff.css">
+
+</head>
+
+<body>
+    
+    <div class="body">
+        <h1 style="text-align: center; color: white; font-family: 'Segoe UI'
+        , Tahoma, Geneva, Verdana, sans-serif; font-weight: lighter; padding-bottom: 30px;"><%=date%></h1>
+       
+        <div class="header">
+            <h2> <%=TITLE%> To Do List</h2>
+        </div>
+
+        <div class="list-item">
+            <ul class="overal-ul">
+                <ul class="list">
+
+                    <form action="/delete" method="post">
+                        <%  newlists.forEach(function(newlist){ %>
+                            <li><input type="checkbox" id="checkbox5" name="del" value="<%=newlist._id%>" onchange="this.form.submit()"> 
+                                <label for="<%=newlist.activity%>"><%=newlist.activity%></label> 
+                            </li>
+                        <%})%>
+                        <input type="hidden" name="route" value="<%=TITLE%>">
+                    </form>
+
+                   
+                    
+                </ul>
+                
+                <form action="/" method="post">
+
+                    <input type="text" name="list" placeholder="Add new item" id="insert" autocomplete="off">
+                <button type="submit" name="btn" value="<%=TITLE%>"><img src="image/plusicon.png" height="15px" width="15px" id="submit"></button>
+
+                </form>
+                
+            </ul>
+           
+        </div>
+        <footer style= "color:rgb(197, 255, 241); font-family: 'Segoe UI', 
+        Tahoma, Geneva, Verdana, sans-serif; font-weight: 200; text-align: center; margin-top: 15px;">Powered by Miralex Graphix</footer>
+    </div>
+
+    <script src="js/index.js"></script>
+
+   
+</body>
+</html>
