@@ -3,6 +3,7 @@ const bodyParser = require("body-parser")
 const _ = require("lodash")
 const mongoose = require("mongoose")
 mongoose.connect("mongodb+srv://laryjude:Miracle%402002@cluster0.vqkvle4.mongodb.net/").then(()=>console.log("Successful")).catch((error)=>console.log(error))
+//mongodb+srv://laryjude:Miracle%402002@cluster0.vqkvle4.mongodb.net/
 
 const app = express()
 app.set('view engine', 'ejs')

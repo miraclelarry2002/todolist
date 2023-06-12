@@ -1,5 +1,1 @@
 node_modules/
-NETLIFY_AUTH_TOKEN
-
-# Local Netlify folder
-.netlify
